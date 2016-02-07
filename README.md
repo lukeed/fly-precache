@@ -4,38 +4,45 @@
   </a>
 </div>
 
-> [Precache](https://github.com/lukeed/fly-precache) plugin for _[Fly][fly]_.
+> Generate a service worker to cache resources and make them available offline.
 
 [![][fly-badge]][fly]
 [![npm package][npm-ver-link]][releases]
 [![][dl-badge]][npm-pkg-link]
 [![][travis-badge]][travis-link]
-[![][mit-badge]][mit]
 
-## Usage
-> Check out the [documentation](PLUGIN_DOCUMENTATION) to see the available options.
-
-### Install
+## Install
 
 ```a
 npm install -D fly-precache
 ```
 
-### Example
+## Example
+
+Cache all assets within the `dist` directory. This will create a `dist/sw` directory that contains two dependencies for the `dist/service-worker.js`.
 
 ```js
 export default function* () {
   yield this
     .source('dist/**/*.{js,html,css,png,jpg,gif}')
     .precache({
-      cacheID: 'fly-starter-kit',
-      rootPath: 'dist',
-      outputFile: 'service-worker.js',
-      stripPrefix: true
-    })
-    .target('dist')
+      root: 'dist',
+      cacheId: 'fly-starter-kit'
+    });
 }
 ```
+
+## API
+
+All `sw-precache` options can be [found here](https://github.com/GoogleChrome/sw-precache#options-parameter).
+
+The only additional option that `fly-precache` exposes is `root`.
+
+#### root
+
+> Type: `string`, Required.
+
+The web-root of your production files. This is where the `service-worker.js` file will be placed.
 
 ## License
 
