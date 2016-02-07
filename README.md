@@ -31,12 +31,8 @@ export default function* () {
 
 ## License
 
-[MIT][mit] © [luke][author] et [al][contributors]
+MIT © [Luke Edwards](https://lukeed.com)
 
-
-[mit]:          http://opensource.org/licenses/MIT
-[author]:       https://lukeed.com
-[contributors]: https://github.com/lukeed/fly-precache/graphs/contributors
 [releases]:     https://github.com/lukeed/fly-precache/releases
 [fly]:          https://www.github.com/flyjs/fly
 [fly-badge]:    https://img.shields.io/badge/fly-JS-05B3E1.svg?style=flat-square
