@@ -25,7 +25,15 @@ npm install -D fly-precache
 
 ```js
 export default function* () {
-  yield ...
+  yield this
+    .source('dist/**/*.{js,html,css,png,jpg,gif}')
+    .precache({
+      cacheID: 'fly-starter-kit',
+      rootPath: 'dist',
+      outputFile: 'service-worker.js',
+      stripPrefix: true
+    })
+    .target('dist')
 }
 ```
 
