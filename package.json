@@ -11,7 +11,12 @@
   "keywords": [
     "fly",
     "fly-plugin",
-    "precache"
+    "precache",
+    "service",
+    "worker",
+    "offline",
+    "sw",
+    "cache"
   ],
   "scripts": {
     "lint": "eslint *.js",
