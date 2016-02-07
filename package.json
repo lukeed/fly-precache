@@ -8,7 +8,7 @@
   "files": [
     "index.js"
   ],
-  "keywords":[
+  "keywords": [
     "fly",
     "fly-plugin",
     "precache"
@@ -28,6 +28,9 @@
     "url": "https://lukeed.com"
   },
   "dependencies": {
+    "object-assign": "^4.0.1",
+    "sw-precache": "^2.3.0",
+    "sw-toolbox": "^3.1.1"
   },
   "devDependencies": {
     "eslint": "^1.10.0",
