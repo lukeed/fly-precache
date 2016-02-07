@@ -4,9 +4,9 @@
   "description": "Generate service worker code to precache specific resources.",
   "license": "MIT",
   "repository": "https://github.com/lukeed/fly-precache",
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
-    "index.js"
+    "lib/*.js"
   ],
   "keywords": [
     "fly",
