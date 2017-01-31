@@ -19,8 +19,8 @@ A full list of `sw-precache` options can be [found here](https://github.com/Goog
 Cache assets within the `dist` directory. This will create a `dist/sw` directory that contains two dependencies for the `dist/service-worker.js`.
 
 ```js
-export default function* () {
-  yield this.source('dist/**/*.{js,html,css,png,jpg,gif}')
+exports.cache = function * (fly) {
+  yield fly.source('dist/**/*.{js,html,css,png,jpg,gif}')
     .precache({
       cacheId: 'my-project-name'
     })
